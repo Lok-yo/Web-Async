@@ -1,4 +1,5 @@
 import { useApp } from '../context/AppContext'
+import { CartIcon, TrashIcon, CheckCircleIcon, KeyIcon } from './Icons'
 
 /**
  * Carrito (Módulo 3)
@@ -20,7 +21,7 @@ export default function Carrito() {
   if (carrito.length === 0) {
     return (
       <section className="carrito">
-        <h2>🛒 Carrito de Compras</h2>
+        <h2><CartIcon /> Carrito de Compras</h2>
         <div className="empty-state">
           <p>Tu carrito está vacío.</p>
           <button className="btn btn-primario" onClick={() => setVista('catalogo')}>
@@ -33,14 +34,14 @@ export default function Carrito() {
 
   return (
     <section className="carrito">
-      <h2>🛒 Carrito de Compras</h2>
+      <h2><CartIcon /> Carrito de Compras</h2>
 
       <div className="carrito-layout">
         {/* ---------------- Lista de items ---------------- */}
         <div className="carrito-items">
           <div className="carrito-toolbar">
             <button className="btn btn-peligro" onClick={vaciarCarrito}>
-              🗑️ Vaciar carrito
+              <TrashIcon /> Vaciar carrito
             </button>
           </div>
 
@@ -110,14 +111,14 @@ export default function Carrito() {
               className="btn btn-primario btn-grande"
               onClick={() => setVista('checkout')}
             >
-              ✅ Finalizar Compra
+              <CheckCircleIcon /> Finalizar Compra
             </button>
           ) : (
             <button
               className="btn btn-primario btn-grande"
               onClick={() => setVista('login')}
             >
-              🔑 Inicia sesión para comprar
+              <KeyIcon /> Inicia sesión para comprar
             </button>
           )}
         </aside>

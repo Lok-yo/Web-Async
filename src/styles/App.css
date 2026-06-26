@@ -616,3 +616,101 @@ body {
   .carrito-item-subtotal { grid-area: subtotal; text-align: right; }
   .grid-productos { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
 }
+
+/* ============================================================
+   ICONOS SVG Y BUSCADOR MODERNO
+   ============================================================ */
+.buscador-wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.buscador-icono {
+  position: absolute;
+  left: 14px;
+  color: var(--color-texto-suave);
+  pointer-events: none;
+  font-size: 1.15rem;
+  transition: var(--transicion);
+}
+
+.input-busqueda-con-icono {
+  width: 100%;
+  padding: 10px 14px 10px 40px;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background: #fff;
+  transition: var(--transicion);
+}
+
+.input-busqueda-con-icono:focus {
+  outline: none;
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.15);
+}
+
+.buscador-wrapper:focus-within .buscador-icono {
+  color: var(--color-primario);
+}
+
+/* Alineamiento de iconos SVG globales */
+svg {
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.navbar-brand svg {
+  margin-right: 8px;
+  color: var(--color-primario);
+  font-size: 1.6rem;
+  transition: transform var(--transicion);
+}
+
+.navbar-brand:hover svg {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+.nav-item svg,
+.btn svg,
+.user-name svg,
+.product-rating svg,
+.ticket h2 svg,
+.splash-logo svg,
+.error-icono svg,
+.checkout h2 svg,
+.login h2 svg,
+.carrito h2 svg,
+.catalogo-header h2 svg {
+  margin-right: 8px;
+}
+
+.nav-item svg {
+  margin-right: 6px;
+}
+
+.error-icono svg {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.splash-logo svg {
+  font-size: 4rem;
+  color: #fff;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+  margin-right: 12px;
+}
+
+.product-rating svg {
+  color: #ffb703;
+  margin-right: 4px;
+}
+
+.paso-numero svg {
+  font-size: 0.9rem;
+  stroke-width: 3px;
+}
+

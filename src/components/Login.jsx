@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useApp } from '../context/AppContext'
+import { KeyIcon, WarningIcon } from './Icons'
 
 /**
  * Login (Módulo 4)
@@ -37,11 +38,11 @@ export default function Login() {
   if (usuario) {
     return (
       <section className="login">
-        <h2>🔑 Sesión iniciada</h2>
+        <h2><KeyIcon /> Sesión iniciada</h2>
         <p>Bienvenido, <strong>{usuario.firstName} {usuario.lastName}</strong></p>
         <p className="muted">Usuario: @{usuario.username}</p>
         <button className="btn btn-primario" onClick={() => setVista('carrito')}>
-          → Ir al carrito
+          Ir al carrito
         </button>
       </section>
     )
@@ -49,7 +50,7 @@ export default function Login() {
 
   return (
     <section className="login">
-      <h2>🔑 Iniciar Sesión</h2>
+      <h2><KeyIcon /> Iniciar Sesión</h2>
       <p className="muted">
         Buscaremos tu usuario en <code>dummyjson.com/users</code>.
         <br />Prueba con: <code>emilys</code>, <code>michaelw</code>, <code>catchick</code>…
@@ -75,7 +76,7 @@ export default function Login() {
         </button>
       </form>
 
-      {error && <p className="error-mensaje">⚠️ {error}</p>}
+      {error && <p className="error-mensaje"><WarningIcon /> {error}</p>}
     </section>
   )
 }

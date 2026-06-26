@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import { useApp } from '../context/AppContext'
 import ProductCard from './ProductCard'
+import { BoxIcon, SearchIcon } from './Icons'
 
 /**
  * Catalogo (Módulo 2)
@@ -62,19 +63,22 @@ export default function Catalogo() {
   return (
     <section className="catalogo">
       <div className="catalogo-header">
-        <h2>📦 Catálogo de Productos</h2>
+        <h2><BoxIcon /> Catálogo de Productos</h2>
         <p>{productosVisibles.length} producto(s) encontrados</p>
       </div>
 
       {/* ---------------- Barra de herramientas ---------------- */}
       <div className="catalogo-tools">
-        <input
-          type="text"
-          className="input-busqueda"
-          placeholder="🔎 Buscar por nombre…"
-          value={busqueda}
-          onChange={(e) => setBusqueda(e.target.value)}
-        />
+        <div className="buscador-wrapper">
+          <SearchIcon className="buscador-icono" />
+          <input
+            type="text"
+            className="input-busqueda-con-icono"
+            placeholder="Buscar por nombre…"
+            value={busqueda}
+            onChange={(e) => setBusqueda(e.target.value)}
+          />
+        </div>
 
         <select
           className="select-filtro"

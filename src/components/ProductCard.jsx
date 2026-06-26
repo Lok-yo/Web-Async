@@ -1,3 +1,5 @@
+import { StarIcon, CartIcon } from './Icons'
+
 /**
  * ProductCard (Módulo 2)
  * - Tarjeta individual de producto.
@@ -27,7 +29,7 @@ export default function ProductCard({ producto, onAgregar }) {
         <h3 className="product-nombre" title={nombre}>{nombre}</h3>
 
         <div className="product-rating">
-          <span>⭐ {rating.toFixed(1)}</span>
+          <span><StarIcon /> {rating.toFixed(1)}</span>
           <span className={sinStock ? 'stock-agotado' : 'stock-ok'}>
             {sinStock ? 'Agotado' : `Stock: ${stock}`}
           </span>
@@ -40,7 +42,7 @@ export default function ProductCard({ producto, onAgregar }) {
             onClick={onAgregar}
             disabled={sinStock}
           >
-            {sinStock ? 'Sin stock' : '🛒 Agregar'}
+            {sinStock ? 'Sin stock' : <><CartIcon /> Agregar</>}
           </button>
         </div>
       </div>

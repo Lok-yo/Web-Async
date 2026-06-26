@@ -1,4 +1,5 @@
 import { useApp } from '../context/AppContext'
+import { BurgerIcon } from './Icons'
 
 /**
  * SplashScreen (Módulo 1)
@@ -11,7 +12,9 @@ export default function SplashScreen() {
   return (
     <div className="splash">
       <div className="splash-contenido">
-        <div className="splash-logo">🍔 Web Asincrona</div>
+        <div className="splash-logo">
+          <BurgerIcon /> Web Asincrona
+        </div>
         <h1>Sistema de Pedidos de Comida Rápida</h1>
 
         <div className="splash-spinner" aria-label="Cargando"></div>

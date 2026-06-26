@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useApp } from '../context/AppContext'
+import { CheckCircleIcon, WarningIcon, RocketIcon } from './Icons'
 import {
   validarConexionInternet,
   validarInventario,
@@ -102,7 +103,7 @@ export default function Checkout() {
     return (
       <section className="checkout">
         <div className="ticket">
-          <h2>✅ ¡Compra realizada con éxito!</h2>
+          <h2><CheckCircleIcon /> ¡Compra realizada con éxito!</h2>
           <p className="muted">Pedido #{ticket.pedidoId}</p>
           <p className="muted">{ticket.fecha}</p>
 
@@ -153,7 +154,7 @@ export default function Checkout() {
   // ---------- Pantalla de checkout ----------
   return (
     <section className="checkout">
-      <h2>✅ Checkout</h2>
+      <h2><CheckCircleIcon /> Checkout</h2>
 
       {carrito.length === 0 ? (
         <div className="empty-state">
@@ -193,7 +194,7 @@ export default function Checkout() {
 
           {error && (
             <div className="error-mensaje error-bloque">
-              ⚠️ {error}
+              <WarningIcon /> {error}
             </div>
           )}
 
@@ -202,7 +203,7 @@ export default function Checkout() {
             onClick={finalizarCompra}
             disabled={procesando}
           >
-            {procesando ? 'Procesando…' : '🚀 Finalizar Compra'}
+            {procesando ? 'Procesando…' : <><RocketIcon /> Finalizar Compra</>}
           </button>
         </>
       )}

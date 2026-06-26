@@ -1,4 +1,5 @@
 import { useApp } from '../context/AppContext'
+import { BurgerIcon, BoxIcon, CartIcon, CheckCircleIcon, KeyIcon, UserIcon } from './Icons'
 
 /**
  * Navbar
@@ -26,22 +27,22 @@ export default function Navbar() {
   return (
     <header className="navbar">
       <div className="navbar-brand" onClick={() => setVista('catalogo')}>
-        🍔 Web Asincrona
+        <BurgerIcon /> Web Asincrona
       </div>
 
       <nav className="navbar-nav">
-        {navItem('catalogo', '📦 Catálogo')}
-        {navItem('carrito', `🛒 Carrito (${resumenCarrito.cantidadTotal})`)}
+        {navItem('catalogo', <><BoxIcon /> Catálogo</>)}
+        {navItem('carrito', <><CartIcon /> Carrito ({resumenCarrito.cantidadTotal})</>)}
         {usuario
-          ? navItem('checkout', '✅ Checkout')
-          : navItem('login', '🔑 Login')}
+          ? navItem('checkout', <><CheckCircleIcon /> Checkout</>)
+          : navItem('login', <><KeyIcon /> Login</>)}
       </nav>
 
       <div className="navbar-user">
         {usuario ? (
           <>
             <span className="user-name">
-              👤 {usuario.firstName} {usuario.lastName}
+              <UserIcon /> {usuario.firstName} {usuario.lastName}
             </span>
             <button className="btn btn-mini" onClick={cerrarSesion}>
               Salir
