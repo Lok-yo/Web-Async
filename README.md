@@ -17,11 +17,6 @@ en cada operación asíncrona.
 - [Documentación de funciones async](#documentación-de-funciones-async)
 - [Usuarios de prueba](#usuarios-de-prueba)
 
-## Requisitos
-
-- Node.js 18+
-- npm 9+
-
 ## Instalación
 
 ```bash
