@@ -1,4 +1,4 @@
-# 🍔 Web Asincrona
+# Web Asincrona
 
 Sistema Asíncrono de Pedidos de Comida Rápida — **React + Vite**.
 
@@ -6,7 +6,7 @@ Aplicación SPA que consume múltiples APIs remotas (FakeStoreAPI + DummyJSON) u
 **`async/await`** de forma estricta, sin recargas de página y con manejo de errores
 en cada operación asíncrona.
 
-## 📋 Tabla de contenidos
+## Tabla de contenidos
 
 - [Requisitos](#requisitos)
 - [Instalación](#instalación)
@@ -98,7 +98,7 @@ web-asincrona/
 La documentación completa de cada función asíncrona (código, propósito,
 manejo de errores y justificación de `async/await`) está en:
 
-👉 **[`DOCUMENTACION_ASYNC.md`](../download/DOCUMENTACION_ASYNC.md)**
+**[`DOCUMENTACION_ASYNC.md`](../download/DOCUMENTACION_ASYNC.md)**
 
 ## Usuarios de prueba (Login)
 
